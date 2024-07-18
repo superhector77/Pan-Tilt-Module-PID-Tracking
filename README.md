@@ -27,6 +27,8 @@ This project is designed to work with the Arducam Pan-Tilt Platform Kit for the 
 
 To avoid potential issues with the Raspberry Pi hardware and the I2C pins, we use the PCA9685 circuit board by Adafruit. This allows us to connect all motors directly to it and use previously published code. This is effectively a fork of the [ArduCAM/PCA9685](https://github.com/ArduCAM/PCA9685) repository (but because I am new to git and GitHub, I do not know how to set that up), so please check that out for more documentation and a wiring diagram (The one for Jetson platforms works great except for how you connect the circuit board to the Raspberry Pi).
 
+The OS used is 'Debian GNU/Linux 12 (bookworm)', the latest version of Raspbian available in June 1 2024, and it was installed via the [Raspberry Pi Imager] (https://www.raspberrypi.com/software/).
+
 ## Software
 
 An additional challenge was that the Raspberry Pi Camera Module 3 has compatibility issues with OpenCV. To address this, we used the Picamera2 Python module, utilizing the `capture_array` function to extract images and perform the necessary processing.
@@ -41,6 +43,16 @@ An additional challenge was that the Raspberry Pi Camera Module 3 has compatibil
 
 ## Installation
 
+Some of the required Python packages include:
+
+- 'picamera2'
+- 'time'
+- 'sys'
+- 'cv2'
+- 'numpy'
+- 'math'
+- 'random'
+  
 I unfortunately did not keep track of all the files, packages and libraries I installed, but I wanted to include that if you are having issues with installing the required Python packages with `pip` outside a virtual environment (research before taking this route, but it worked for me), you could use the `--break-system-packages` argument.
 
 The `yolov3.weights` file was too large to upload to GitHub, so download it from [here](https://www.dropbox.com/scl/fi/nzwga4u87ytv7dowcynsp/yolov3.weights?rlkey=d117ida2e4fid4mrq9ov31rg5&st=tpxar9ye&dl=0), or look for a different set of weights and configurations online.
