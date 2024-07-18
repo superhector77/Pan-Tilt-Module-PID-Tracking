@@ -43,7 +43,7 @@ An additional challenge was that the Raspberry Pi Camera Module 3 has compatibil
 
 I unfortunately did not keep track of all the files, packages and libraries I installed, but I wanted to include that if you are having issues with installing the required Python packages with `pip` outside a virtual environment (research before taking this route, but it worked for me), you could use the `--break-system-packages` argument.
 
-Also, the yolov3.weights file was too large to upload to GitHub, so download it from [here](https://www.dropbox.com/scl/fi/nzwga4u87ytv7dowcynsp/yolov3.weights?rlkey=d117ida2e4fid4mrq9ov31rg5&st=tpxar9ye&dl=0) if you want, or look for a different set of weights and configurations online.
+The `yolov3.weights` file was too large to upload to GitHub, so download it from [here](https://www.dropbox.com/scl/fi/nzwga4u87ytv7dowcynsp/yolov3.weights?rlkey=d117ida2e4fid4mrq9ov31rg5&st=tpxar9ye&dl=0), or look for a different set of weights and configurations online.
 
 ## Acknowledgements
 
