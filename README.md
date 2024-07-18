@@ -45,13 +45,13 @@ An additional challenge was that the Raspberry Pi Camera Module 3 has compatibil
 
 Some of the required Python packages include:
 
-- 'picamera2'
-- 'time'
-- 'sys'
-- 'cv2'
-- 'numpy'
-- 'math'
-- 'random'
+- `picamera2`
+- `time`
+- `sys`
+- `cv2`
+- `numpy`
+- `math`
+- `random`
   
 I unfortunately did not keep track of all the files, packages and libraries I installed, but I wanted to include that if you are having issues with installing the required Python packages with `pip` outside a virtual environment (research before taking this route, but it worked for me), you could use the `--break-system-packages` argument.
 
