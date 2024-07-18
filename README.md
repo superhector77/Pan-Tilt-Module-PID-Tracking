@@ -27,7 +27,7 @@ This project is designed to work with the Arducam Pan-Tilt Platform Kit for the 
 
 To avoid potential issues with the Raspberry Pi hardware and the I2C pins, we use the PCA9685 circuit board by Adafruit. This allows us to connect all motors directly to it and use previously published code. This is effectively a fork of the [ArduCAM/PCA9685](https://github.com/ArduCAM/PCA9685) repository (but because I am new to git and GitHub, I do not know how to set that up), so please check that out for more documentation and a wiring diagram (The one for Jetson platforms works great except for how you connect the circuit board to the Raspberry Pi).
 
-The OS used is 'Debian GNU/Linux 12 (bookworm)', the latest version of Raspbian available in June 1 2024, and it was installed via the [Raspberry Pi Imager] (https://www.raspberrypi.com/software/).
+The OS used is `Debian GNU/Linux 12 (bookworm)`, the latest version of Raspbian available in June 1 2024, and it was installed via the [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
 ## Software
 
@@ -39,7 +39,7 @@ An additional challenge was that the Raspberry Pi Camera Module 3 has compatibil
 
 ### ML_PID
 
-`ML_PID` has much more detailed comments. Initially, it used a YOLOv3 model for object detection on each captured frame, but this proved too slow for practical application. To improve performance, we search for objects until one is found (with an adjustable confidence threshold). Then, we take a weighted average of the colors surrounding the center of the detection area. For each captured frame, we seek the CoM of this average color. This approach works best when the target object is a different color from its environment.
+`ML_PID` has much more detailed comments. Initially, it used a YOLOv3 model for object detection on each captured frame, but this proved too slow for practical application. To improve performance, we search for objects until one is found (with an adjustable confidence threshold) by moving the cameras in randomized directions. Then, we take a weighted average of the colors surrounding the center of the detection area. For each captured frame, we seek the CoM of this average color. This approach works best when the target object is a different color from its environment.
 
 ## Installation
 
